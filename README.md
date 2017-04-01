@@ -1,1 +1,13 @@
-# Tik-Tak-Toe-Haskell
+# Tik Tak Toe
+
+## Run
+
+```
+$ make play
+```
+
+## Clean
+
+```
+$ make clean
+```
