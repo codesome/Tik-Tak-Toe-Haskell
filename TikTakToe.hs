@@ -198,12 +198,10 @@ runGameLoop state = do
     hFlush stdout
 
     h <- getLine
-
-
+    putStr "\ESC[2J"
     let hi = if (isGameInProgress state)
         then h
         else "-1"
-
 
     let hit = read hi :: Int
 
@@ -230,8 +228,6 @@ runGameLoop state = do
             if whoWon==None
                 then putStrLn "Game Draw"
                 else putStrLn (foldr (++) "" [getPlayerName whoWon," Won!"])
-
-
 
 -- Drawing the board
 drawBoard :: GameState -> IO ()
@@ -277,6 +273,7 @@ initialGameState = GameState {
 -- Starting the game
 startGame :: IO ()
 startGame = do
+    
     putStrLn "+---+---+---+"
     putStrLn "| 1 | 2 | 3 |"
     putStrLn "+---+---+---+"

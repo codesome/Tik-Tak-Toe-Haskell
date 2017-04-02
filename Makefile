@@ -1,10 +1,6 @@
 install:
-	ghc GameMain.hs TikTakToe.hs
+	cabal install
+	
+play:
+	./dist/build/Tik-Tak-Toe-Haskell/Tik-Tak-Toe-Haskell
 
-play: install
-	./GameMain
-
-clean:
-	rm -f *.o *.hi GameMain
-
-.PHONY = clean

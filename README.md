@@ -3,11 +3,7 @@
 ## Run
 
 ```
+$ make install
 $ make play
 ```
 
-## Clean
-
-```
-$ make clean
-```
